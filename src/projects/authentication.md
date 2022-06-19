@@ -43,7 +43,7 @@
   - Content Type: application/json
   - Body: { email }
 - GET /recovery?email=user@example.com&recovery_code=recovery_code
-- POST /recovery/send-recovery-link
+- POST /recovery/update-password
   - Content Type: application/json
   - Body: { email, recovery_code, password }
 
