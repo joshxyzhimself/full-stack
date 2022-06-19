@@ -3,8 +3,8 @@ authors = ["joshxyzhimself"]
 language = "en"
 multilingual = false
 src = "src"
-title = "Example Title"
-description = "Example description."
+title = "Full Stack"
+description = "Notes notes notes."
 
 [output.html]
 git-repository-icon = "fa-github"

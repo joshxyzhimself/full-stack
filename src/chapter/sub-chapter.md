@@ -1,3 +1,0 @@
-# Sub-chapter
-
-Hello world!

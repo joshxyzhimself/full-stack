@@ -1,5 +1,5 @@
 # Summary
 
 - [Introduction](./introduction.md)
-- [Chapter](./chapter/index.md)
-  - [Sub-chapter](./chapter/sub-chapter.md)
+- [Projects](./projects/index.md)
+  - [Authentication](./projects/authentication.md)
