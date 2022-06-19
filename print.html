@@ -145,26 +145,26 @@
 <li><a href="projects/./authentication.html">Authentication</a></li>
 </ul>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="authentication"><a class="header" href="#authentication">Authentication</a></h1>
-<h4 id="requirements"><a class="header" href="#requirements">Requirements</a></h4>
+<h2 id="requirements"><a class="header" href="#requirements">Requirements</a></h2>
 <ul>
 <li>Relational Database (e.g. PostgreSQL)</li>
+<li>Web Server (e.g. Express.js, Koa.js, uWebSockets.js)</li>
 </ul>
-<h4 id="checklist"><a class="header" href="#checklist">Checklist</a></h4>
-<ul>
-<li><input disabled="" type="checkbox"/>
-Users can sign-up
+<h2 id="core-features"><a class="header" href="#core-features">Core Features</a></h2>
+<h4 id="users-can-sign-up"><a class="header" href="#users-can-sign-up">Users can sign-up</a></h4>
 <ul>
 <li>GET /sign-up</li>
 <li>POST /sign-up
 <ul>
 <li>Content Type: application/json</li>
-<li>Body: { email, password }</li>
+<li>Body: { name, email, password }</li>
 </ul>
 </li>
+<li>Server-side: validate email</li>
+<li>Server-side: validate password</li>
+<li>Server-side: use </li>
 </ul>
-</li>
-<li><input disabled="" type="checkbox"/>
-Users can sign-in
+<h4 id="users-can-sign-in"><a class="header" href="#users-can-sign-in">Users can sign-in</a></h4>
 <ul>
 <li>GET /sign-in</li>
 <li>POST /sign-in
@@ -174,18 +174,69 @@ Users can sign-in
 </ul>
 </li>
 </ul>
-</li>
-<li><input disabled="" type="checkbox"/>
-Users can sign-out
+<h4 id="users-can-view-their-account"><a class="header" href="#users-can-view-their-account">Users can view their account</a></h4>
+<ul>
+<li>GET /account</li>
+</ul>
+<h4 id="users-can-sign-out"><a class="header" href="#users-can-sign-out">Users can sign-out</a></h4>
 <ul>
 <li>POST /sign-out
 <ul>
 <li>Content Type: application/json</li>
-<li>Body: {}</li>
+<li>Body: { }</li>
 </ul>
 </li>
 </ul>
+<h2 id="improvements"><a class="header" href="#improvements">Improvements</a></h2>
+<h4 id="users-can-recover-their-account"><a class="header" href="#users-can-recover-their-account">Users can recover their account</a></h4>
+<ul>
+<li>GET /recovery</li>
+<li>POST /recovery/send-recovery-link
+<ul>
+<li>Content Type: application/json</li>
+<li>Body: { email }</li>
+</ul>
 </li>
+<li>GET /recovery?email=user@example.com&amp;recovery_code=recovery_code</li>
+<li>POST /recovery/send-recovery-link
+<ul>
+<li>Content Type: application/json</li>
+<li>Body: { email, recovery_code, password }</li>
+</ul>
+</li>
+</ul>
+<h4 id="users-can-update-their-account"><a class="header" href="#users-can-update-their-account">Users can update their account</a></h4>
+<ul>
+<li>POST /account/update-name
+<ul>
+<li>Content Type: application/json</li>
+<li>Body: { name }</li>
+</ul>
+</li>
+<li>POST /account/update-password
+<ul>
+<li>Content Type: application/json</li>
+<li>Body: { current_password, new_password }</li>
+</ul>
+</li>
+</ul>
+<h4 id="use-simple-fields-for-names"><a class="header" href="#use-simple-fields-for-names">Use simple fields for names</a></h4>
+<ul>
+<li>https://www.w3.org/International/questions/qa-personal-names</li>
+</ul>
+<h4 id="normalize-user-input-with-nfkc"><a class="header" href="#normalize-user-input-with-nfkc">Normalize user input with NFKC</a></h4>
+<ul>
+<li>https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/normalize</li>
+</ul>
+<h4 id="use-latacoras-password-handling-recommendations"><a class="header" href="#use-latacoras-password-handling-recommendations">Use Latacora's Password Handling Recommendations</a></h4>
+<pre><code>Latacora, 2018: In order of preference, use scrypt, argon2, bcrypt, and then if nothing else is available PBKDF2.
+</code></pre>
+<ul>
+<li>https://latacora.micro.blog/2018/04/03/cryptographic-right-answers.html#password-handling</li>
+</ul>
+<h4 id="use-owasps-authentication-checklist"><a class="header" href="#use-owasps-authentication-checklist">Use OWASP's Authentication Checklist</a></h4>
+<ul>
+<li>https://cheatsheetseries.owasp.org/cheatsheets/Authentication_Cheat_Sheet.html</li>
 </ul>
 
                     </main>
