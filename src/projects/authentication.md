@@ -60,8 +60,21 @@
 
 - https://www.w3.org/International/questions/qa-personal-names
 
-#### Normalize user input with NFKC
+#### Use Unicode Case-Folding
 
+- https://www.w3.org/TR/charmod-norm/#definitionCaseFolding
+- https://github.com/joshxyzhimself/modules/blob/main/casefold.mjs
+- https://github.com/joshxyzhimself/modules/blob/main/casefold.test.mjs
+
+#### Use Unicode Normalization with NFKC
+
+
+```
+NFKC is the preferred form for identifiers, especially where there are security concerns.
+```
+
+- https://www.w3.org/TR/charmod-norm/#unicodeNormalization
+- https://unicode.org/faq/normalization.html
 - https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/normalize
 
 #### Use Latacora's Password Handling Recommendations
