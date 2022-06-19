@@ -3,11 +3,11 @@
     <head>
         <!-- Book generated using mdBook -->
         <meta charset="UTF-8">
-        <title>Example Title</title>
+        <title>Full Stack</title>
         <meta name="robots" content="noindex" />
         <!-- Custom HTML head -->
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
-        <meta name="description" content="Example description.">
+        <meta name="description" content="Notes notes notes.">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <meta name="theme-color" content="#ffffff" />
 
@@ -76,7 +76,7 @@
 
         <nav id="sidebar" class="sidebar" aria-label="Table of contents">
             <div class="sidebar-scrollbox">
-                <ol class="chapter"><li class="chapter-item expanded "><a href="introduction.html"><strong aria-hidden="true">1.</strong> Introduction</a></li><li class="chapter-item expanded "><a href="chapter/index.html"><strong aria-hidden="true">2.</strong> Chapter</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="chapter/sub-chapter.html"><strong aria-hidden="true">2.1.</strong> Sub-chapter</a></li></ol></li></ol>
+                <ol class="chapter"><li class="chapter-item expanded "><a href="introduction.html"><strong aria-hidden="true">1.</strong> Introduction</a></li><li class="chapter-item expanded "><a href="projects/index.html"><strong aria-hidden="true">2.</strong> Projects</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="projects/authentication.html"><strong aria-hidden="true">2.1.</strong> Authentication</a></li></ol></li></ol>
             </div>
             <div id="sidebar-resize-handle" class="sidebar-resize-handle"></div>
         </nav>
@@ -105,7 +105,7 @@
                         </button>
                     </div>
 
-                    <h1 class="menu-title">Example Title</h1>
+                    <h1 class="menu-title">Full Stack</h1>
 
                     <div class="right-buttons">
                         <a href="print.html" title="Print this book" aria-label="Print this book">
@@ -140,10 +140,53 @@
                     <main>
                         <h1 id="introduction"><a class="header" href="#introduction">Introduction</a></h1>
 <p>Hello world!</p>
-<div style="break-before: page; page-break-before: always;"></div><h1 id="chapter"><a class="header" href="#chapter">Chapter</a></h1>
-<p>Hello world!</p>
-<div style="break-before: page; page-break-before: always;"></div><h1 id="sub-chapter"><a class="header" href="#sub-chapter">Sub-chapter</a></h1>
-<p>Hello world!</p>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="projects"><a class="header" href="#projects">Projects</a></h1>
+<ul>
+<li><a href="projects/./authentication.html">Authentication</a></li>
+</ul>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="authentication"><a class="header" href="#authentication">Authentication</a></h1>
+<h4 id="requirements"><a class="header" href="#requirements">Requirements</a></h4>
+<ul>
+<li>Relational Database (e.g. PostgreSQL)</li>
+</ul>
+<h4 id="checklist"><a class="header" href="#checklist">Checklist</a></h4>
+<ul>
+<li><input disabled="" type="checkbox"/>
+Users can sign-up
+<ul>
+<li>GET /sign-up</li>
+<li>POST /sign-up
+<ul>
+<li>Content Type: application/json</li>
+<li>Body: { email, password }</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><input disabled="" type="checkbox"/>
+Users can sign-in
+<ul>
+<li>GET /sign-in</li>
+<li>POST /sign-in
+<ul>
+<li>Content Type: application/json</li>
+<li>Body: { email, password }</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><input disabled="" type="checkbox"/>
+Users can sign-out
+<ul>
+<li>POST /sign-out
+<ul>
+<li>Content Type: application/json</li>
+<li>Body: {}</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
 
                     </main>
 
